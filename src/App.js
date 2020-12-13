@@ -8,6 +8,22 @@
 
 import React from 'react';
 import {SafeAreaView, StatusBar} from 'react-native';
+import Home from './screens/Home';
+
+const App: () => React$Node = () => {
+  return (
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView>
+        <AntDesign name={'home'} size={30} />
+        <Icon name={'home'} size={30} />
+        <Home />
+      </SafeAreaView>
+    </>
+  );
+};
+
+export default App;
 
 import Icon from 'react-native-vector-icons/dist/FontAwesome';
 import iconFont from 'react-native-vector-icons/Fonts/FontAwesome.ttf';
@@ -33,14 +49,3 @@ if (style.styleSheet) {
   style.appendChild(document.createTextNode(iconFontStyles));
 }
 document.head.appendChild(style);
-
-const App: () => React$Node = () => {
-  return (
-    <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView></SafeAreaView>
-    </>
-  );
-};
-
-export default App;
